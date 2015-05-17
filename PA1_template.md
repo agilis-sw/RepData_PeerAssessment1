@@ -1,4 +1,9 @@
-# Reproducible Research: Peer Assessment 1
+---
+title: "Reproducible Research: Peer Assessment 1"
+output: 
+  html_document:
+    keep_md: true
+---
 
 
 ## Loading and preprocessing the data
@@ -34,7 +39,7 @@ steps organized into 25 buckets (roughly corresponding to increments of 1000 ste
 hist(dft$total.steps, breaks=25, main="Total number of steps taken each day", xlab="Sum of steps")
 ```
 
-![](PA1_template_files/figure-html/unnamed-chunk-3-1.png) 
+![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3-1.png) 
 
 Finally, we obtain the overall mean and median values of the total number of steps per day:
 
@@ -56,7 +61,7 @@ plot(dfi$interval, dfi$avg.steps, xlab="5-minute interval number", ylab="Average
      main="Average number of steps by interval across all observations", type="l")
 ```
 
-![](PA1_template_files/figure-html/getaverage-1.png) 
+![plot of chunk getaverage](figure/getaverage-1.png) 
   
 Finally, we more-precisely obtain the interval corresponding to the maximum activity
 than is approximately apparent from the chart, by identifying the entry with
@@ -114,7 +119,7 @@ mean and median, for comparison with the original plot based on complete cases:
 hist(dft2$total.steps, breaks=25, main="Total # of daily steps (after imputing missing values)", xlab="Sum of steps")
 ```
 
-![](PA1_template_files/figure-html/plotimputed-1.png) 
+![plot of chunk plotimputed](figure/plotimputed-1.png) 
 
 ```r
 meanvalue2=as.integer(mean(dft2$total.steps))
@@ -175,7 +180,7 @@ xyplot(avg.steps~interval|weektype.f, data=dfi, type="l",
            layout=c(1,2))
 ```
 
-![](PA1_template_files/figure-html/plotweekdayweekend-1.png) 
+![plot of chunk plotweekdayweekend](figure/plotweekdayweekend-1.png) 
   
 From the above, it appears that on weekends, the average steps are relatively 
 evenly distributed throughout the day from mid-morning through late evening, whereas 
