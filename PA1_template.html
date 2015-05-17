@@ -122,7 +122,7 @@ medianvalue2=as.integer(median(dft2$total.steps))</code></pre>
 </div>
 <div id="are-there-differences-in-activity-patterns-between-weekdays-and-weekends" class="section level2">
 <h2>Are there differences in activity patterns between weekdays and weekends?</h2>
-<p>To answer this question, we apply the following methodology:<br />1. Attach a weekday / weekend attribute to the observations with imputed missing values based on whether the corresponding date falls on a weekday or weekend, respectively. 2. For each of the two subsets of observations corresponding to weekdays and weekends, generate a table of average summaries by interval number. 3. Merge the two summary tables. 4. Generate a panel line plot using the weekday / weekend attribute to split the plots into panels, using the lattice package.</p>
+<p>To answer this question, we apply the following methodology:<br />1. Attach a weekday / weekend attribute to the observations with imputed missing values based on whether the corresponding date falls on a weekday or weekend, respectively.<br />2. For each of the two subsets of observations corresponding to weekdays and weekends, generate a table of average summaries by interval number.<br />3. Merge the two summary tables.<br />4. Generate a panel line plot using the weekday / weekend attribute to split the plots into panels, using the lattice package.</p>
 <p>Code:</p>
 <pre class="r"><code># Add a weekinfo variable to indicate weekday vs weekend
 df$weekinfo=sapply(df$date,

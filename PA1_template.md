@@ -133,12 +133,12 @@ we used averages to impute missing values, which had a smoothing effect.
   
 To answer this question, we apply the following methodology:  
 1. Attach a weekday / weekend attribute to the observations with imputed missing
-values based on whether the corresponding date falls on a weekday or weekend, respectively.
+values based on whether the corresponding date falls on a weekday or weekend, respectively.  
 2. For each of the two subsets of observations corresponding to weekdays and weekends,
-generate a table of average summaries by interval number.
-3. Merge the two summary tables.
+generate a table of average summaries by interval number.  
+3. Merge the two summary tables.  
 4. Generate a panel line plot using the weekday / weekend attribute to split the plots into
-panels, using the lattice package.
+panels, using the lattice package.  
   
 Code:  
 
